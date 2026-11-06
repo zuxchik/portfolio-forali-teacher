@@ -22,13 +22,13 @@ function Contact() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-
+  
     setSending(true);
     setStatus("");
-
+  
     try {
       const response = await fetch(
-        "YOUR_BACKEND_URL/api/contact",
+        "http://localhost:3000/api/contact",
         {
           method: "POST",
           headers: {
@@ -37,20 +37,23 @@ function Contact() {
           body: JSON.stringify(form),
         }
       );
-
+  
       const data = await response.json();
-
+  
       if (!response.ok) {
         throw new Error(data.message || "Message failed");
       }
-
+  
       setStatus("Message sent successfully!");
+  
       setForm({
         name: "",
         telegram: "",
         message: "",
       });
+  
     } catch (error) {
+      console.error(error);
       setStatus("Something went wrong. Please try again.");
     } finally {
       setSending(false);

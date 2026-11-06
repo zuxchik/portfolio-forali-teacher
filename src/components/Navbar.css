@@ -1,0 +1,145 @@
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 8%;
+    border-bottom: 1px solid #222433;
+    background: #090b14;
+  }
+  
+  .navbar-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #f5f5fa;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  
+  .navbar-logo-icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid #49396e;
+    border-radius: 10px;
+    background: #19152b;
+    color: #b7a6ff;
+  }
+  
+  .navbar-logo-accent {
+    color: #a58aff;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .navbar-links a {
+    position: relative;
+    padding: 8px 0;
+    color: #a5a8b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+  }
+  
+  .navbar-links a:hover,
+  .navbar-links a.active {
+    color: #f5f5fa;
+  }
+  
+  .navbar-links a.active::after {
+    position: absolute;
+    right: 0;
+    bottom: -19px;
+    left: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: #a58aff;
+    content: "";
+  }
+  
+  .navbar-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid #39304f;
+    border-radius: 8px;
+    color: #f5f5fa;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+  }
+  
+  .navbar-cta:hover {
+    background: #19152b;
+  }
+  
+  .navbar-cta span {
+    color: #b7a6ff;
+  }
+  
+  @media (max-width: 760px) {
+    .navbar {
+      flex-wrap: wrap;
+      padding: 16px 5%;
+    }
+  
+    .navbar-links {
+      order: 3;
+      width: 100%;
+      justify-content: space-between;
+      gap: 12px;
+    }
+  
+    .navbar-links a {
+      font-size: 13px;
+    }
+  
+    .navbar-links a.active::after {
+      bottom: -5px;
+    }
+  
+    .navbar-cta {
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .navbar-logo {
+      gap: 6px;
+      font-size: 16px;
+    }
+  
+    .navbar-logo-icon {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .navbar-cta {
+      gap: 5px;
+      padding: 9px;
+    }
+  
+    .navbar-links {
+      gap: 8px;
+    }
+  
+    .navbar-links a {
+      font-size: 12px;
+    }
+  }
+  

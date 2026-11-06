@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const allowedOrigins = (
-  process.env.FRONTEND_URL || "http://localhost:5173"
+  process.env.FRONTEND_URL || "https://portflio-forali-teacher.netlify.app/"
 ).split(",").map(origin => origin.trim());
 
 app.use(cors({
